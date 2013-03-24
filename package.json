@@ -1,0 +1,26 @@
+{
+  "name": "git-walk-tree",
+  "version": "0.0.0",
+  "description": "walk a git tree represented by a git commit",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisdickinson/git-walk-tree.git"
+  },
+  "keywords": [
+    "git",
+    "walk",
+    "tree",
+    "stream"
+  ],
+  "author": "Chris Dickinson <chris@neversaw.us>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "b96b8d435ce0fbf0cf951d56c80a1423485acc6a",
+  "dependencies": {
+    "through": "~2.2.7"
+  }
+}
