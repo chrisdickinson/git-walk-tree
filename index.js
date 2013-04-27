@@ -50,7 +50,7 @@ function walk(findhash, commit, ignore) {
       })
     }
 
-    object.stack = stack
+    object.stack = stack.slice()
     stream.queue(object)
 
     var entries = object.entries && object.entries()
