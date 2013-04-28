@@ -46,14 +46,17 @@ function walk(findhash, commit, ignore) {
       return
     }
 
+
     if(stream.paused) {
       return stream.once('drain', function() {
         gotobject(err, object, done)
       })
     }
 
-    object.stack = stack ? stack.slice() : [];
-    stream.queue(object)
+    if(!ignore[object.hash]) {
+      object.stack = stack ? stack.slice() : []
+      stream.queue(object)
+    }
 
     var entries = object.entries && object.entries()
       , idx = 0
