@@ -35,6 +35,8 @@ function walk(findhash, commit, ignore) {
       stream.queue(null)
       ended = true
     }
+    
+    object = object || {};
 
     if(err) {
       return stream.emit('error', err)
@@ -50,7 +52,7 @@ function walk(findhash, commit, ignore) {
       })
     }
 
-    object.stack = stack.slice()
+    object.stack = stack ? stack.slice() : [];
     stream.queue(object)
 
     var entries = object.entries && object.entries()
